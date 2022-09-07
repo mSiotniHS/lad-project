@@ -1,0 +1,7 @@
+.base {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	background-color: var(--background);
+}

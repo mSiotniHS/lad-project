@@ -1,0 +1,17 @@
+:root {
+    --primary: hsla(253, 100%, 59%, 1);
+    --on-primary: hsla(253, 0%, 100%, 1);
+    --primary-container: hsla(253, 100%, 94%, 1);
+    --on-primary-container: hsla(255, 100%, 20%, 1);
+
+    --secondary: hsla(248, 20%, 44%, 1);
+    --on-secondary: hsla(248, 0%, 100%, 1);
+    --secondary-container: hsla(253, 100%, 94%, 1);
+    --on-secondary-container: hsla(249, 49%, 16%, 1);
+
+    --background: hsla(300, 100%, 99%, 1);
+
+    --surface: hsla(300, 100%, 99%, 1);
+    --surface-variant: hsla(265, 24%, 90%, 1);
+    --on-surface-variant: hsla(258, 7%, 29%, 1);
+}

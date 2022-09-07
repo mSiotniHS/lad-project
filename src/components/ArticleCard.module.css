@@ -1,0 +1,14 @@
+.card {
+	background-color: var(--surface-variant);
+	border-radius: 12px;
+}
+
+.text {
+	color: var(--on-surface-variant);
+	display: flex;
+	flex-direction: column;
+}
+
+.text * {
+	padding: 16px;
+}

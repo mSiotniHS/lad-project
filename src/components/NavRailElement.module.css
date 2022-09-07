@@ -1,0 +1,26 @@
+.element {
+    min-width: 56px;
+    height: 56px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.iconWrapper {
+    width: 56px;
+    height: 32px;
+    border-radius: 100px;
+    background-color: var(--secondary-container);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
