@@ -1,3 +1,8 @@
 @import "./style/reset.css";
 @import "./style/material/text-styles.css";
 @import "./style/material/light-colors.css";
+@import "./style/material/dark-colors.css";
+
+* {
+	transition: color 0.5s ease, background-color 0.5s ease;
+}

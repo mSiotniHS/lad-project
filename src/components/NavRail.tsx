@@ -1,8 +1,13 @@
 import React, { FC } from "react";
 import NavRailElement from "./NavRailElement";
 import styles from "./NavRail.module.css";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { toggleTheme } from "../store/slices/appSettingsSlice";
 
 const NavRail: FC = () => {
+	const theme = useAppSelector(state => state.settings.theme);
+	const dispatch = useAppDispatch();
+
 	return (
 		<div className={styles.navRail}>
 			<p className="headline-medium">市場</p>
@@ -29,8 +34,7 @@ const NavRail: FC = () => {
 				/>
 			</nav>
 			<div>
-				<p>Тема</p>
-				<p>Главный цвет</p>
+				<button onClick={() => dispatch(toggleTheme())}>{theme}</button>
 			</div>
 		</div>
 	);

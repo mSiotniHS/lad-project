@@ -1,3 +1,18 @@
 :root[data-theme="dark"] {
+	--primary: hsla(248, 100%, 87%, 1);
+	--on-primary: hsla(257, 100%, 31%, 1);
+	--primary-container: hsla(258, 100%, 43%, 1);
+	--on-primary-container: hsla(253, 100%, 94%, 1);
 
+	--secondary: hsla(248, 68%, 85%, 1);
+	--on-secondary: hsla(247, 32%, 25%, 1);
+	--secondary-container: hsla(248, 25%, 34%, 1);
+	--on-secondary-container: hsla(253, 100%, 94%, 1);
+
+	--background: hsla(255, 7%, 11%, 1);
+
+	--surface: hsla(255, 7%, 11%, 1);
+	--on-surface: hsla(288, 9%, 89%, 1);
+	--surface-variant: hsla(258, 7%, 29%, 1);
+	--on-surface-variant: hsla(262, 10%, 79%, 1);
 }
