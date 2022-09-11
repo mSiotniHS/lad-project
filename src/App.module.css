@@ -5,3 +5,11 @@
 	grid-template-columns: 120px 1fr;
 	background-color: var(--background);
 }
+
+.main {
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+	padding: 70px max(calc((100vw - 1075px)/2), 40px) 0;
+	overflow-y: auto;
+}

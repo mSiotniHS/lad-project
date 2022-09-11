@@ -21,7 +21,7 @@ const App: FC = () => {
 	return (
 		<div className={styles.base}>
 			<NavRail />
-			<main>
+			<main className={styles.main}>
 				<Routes>
 					<Route path="/" element={<h1>Сводка</h1>} />
 					<Route path="/news" element={ <News /> } />
