@@ -6,13 +6,14 @@ import styles from "./News.module.css";
 import Masonry from "react-masonry-css";
 import TonalButton from "../components/TonalButton";
 
-const useMountEffect = (fun: React.EffectCallback) => useEffect(fun, [])
-
 const News: FC = () => {
 	const news = useAppSelector(state => state.news.articles);
 	const dispatch = useAppDispatch();
 
-	useMountEffect(() => { dispatch(addManyNewsAsync()); });
+	useEffect(() => {
+		dispatch(addManyNewsAsync());
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<div className={styles.news}>
