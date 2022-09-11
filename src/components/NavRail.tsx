@@ -10,7 +10,7 @@ const NavRail: FC = () => {
 
 	return (
 		<div className={styles.navRail}>
-			<p className="headline-medium">市場</p>
+			<p className="headline-medium" style={{color: "var(--on-surface)"}}>市場</p>
 			<nav className={styles.links}>
 				<NavRailElement
 					path="/"
@@ -33,9 +33,7 @@ const NavRail: FC = () => {
 					iconName="auto_awesome_mosaic"
 				/>
 			</nav>
-			<div>
-				<button onClick={() => dispatch(toggleTheme())}>{theme}</button>
-			</div>
+			<button onClick={() => dispatch(toggleTheme())}>{theme}</button>
 		</div>
 	);
 }
