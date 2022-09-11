@@ -1,6 +1,9 @@
+a { display: block; }
+
 .card {
 	background-color: var(--surface-variant);
 	border-radius: 12px;
+	overflow: hidden;
 }
 
 .text {
@@ -9,6 +12,6 @@
 	flex-direction: column;
 }
 
-.text * {
+.text > * {
 	padding: 16px;
 }

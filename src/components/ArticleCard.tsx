@@ -1,23 +1,22 @@
 import React, { FC } from "react";
 import styles from "./ArticleCard.module.css";
 import { Article } from "../store/slices/newsSlice";
-import { classes } from "../helpers";
 
 interface Props {
 	article: Article
 }
 
-const ArticleCard: FC<Props> = ({ article: { title, description, url, imageUrl } }) => {
+const ArticleCard: FC<Props> = ({article: {title, description, url, imageUrl}}) => {
 	return (
-		<div className={styles.card}>
+		<a className={styles.card} href={url} target="_blank" rel="noopener noreferrer">
 			{imageUrl &&
-				<img src={imageUrl} alt={title} />
+				<img src={imageUrl} alt={title}/>
 			}
 			<div className={styles.text}>
-				<h2 className={classes("body-large")}>{title}</h2>
-				<p>{description}</p>
+				<h2 className="body-large">{title}</h2>
+				<p className="body-medium">{description}</p>
 			</div>
-		</div>
+		</a>
 	);
 }
 
