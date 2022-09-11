@@ -13,7 +13,7 @@ interface Props {
 
 const NavRailElement: FC<Props> = ({ path, text, iconName }) => {
 	return (
-		<NavLink to={path}>
+		<NavLink to={path} className={activeTheme}>
 			<div className={styles.iconWrapper}>
 				<img className={styles.icon} src={`${iconPath}${iconName}.svg`} alt={iconName} />
 			</div>
@@ -21,5 +21,13 @@ const NavRailElement: FC<Props> = ({ path, text, iconName }) => {
 		</NavLink>
 	);
 };
+
+function activeTheme(props: { isActive: boolean }): string {
+	if (props.isActive) {
+		return classes(styles.element, styles.active);
+	} else {
+		return styles.element;
+	}
+}
 
 export default NavRailElement;

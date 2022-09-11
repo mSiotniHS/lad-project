@@ -7,13 +7,23 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
+
+    --background-color: transparent;
+    --icon-color: var(--on-surface-variant);
+    --text-color: var(--on-surface-variant);
+}
+
+.active {
+    --background-color: var(--secondary-container);
+    --icon-color: var(--on-secondary-container);
+    --text-color: var(--on-surface);
 }
 
 .iconWrapper {
     width: 56px;
     height: 32px;
     border-radius: 100px;
-    background-color: var(--secondary-container);
+    background-color: var(--background-color);
 
     display: flex;
     justify-content: center;
@@ -23,4 +33,9 @@
 .icon {
     width: 24px;
     height: 24px;
+    color: var(--icon-color);
+}
+
+.text {
+    color: var(--text-color);
 }
