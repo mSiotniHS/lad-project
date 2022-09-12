@@ -5,7 +5,7 @@ export interface Article {
 	title: string;
 	description: string;
 	url: string;
-	imageUrl: string | null;
+	imageUrl?: string;
 }
 
 export interface NewsState {
@@ -25,19 +25,16 @@ const initialState: NewsState = {
 			title: "Росстат ухудшил оценку падения ВВП во втором квартале до 4,1%",
 			description: "Федеральная служба государственной статистики (Росстат) ухудшила оценку спада ВВП во втором квартале 2022 года до 4,1%, общий объем ВВП — 34,663 трлн руб.",
 			url: "https://www.kommersant.ru/doc/5557518",
-			imageUrl: null
 		},
 		{
 			title: "Объем ФНБ снизился на 285,9 млрд рублей",
 			description: "Министерство финансов отчиталось о размещении средств Фонда национального благосостояния (ФНБ) за 2022 год.",
 			url: "https://www.kommersant.ru/doc/5557480",
-			imageUrl: null
 		},
 		{
 			title: "Профицит консолидированного бюджета в январе--июле составил 2,1 трлн рублей",
 			description: "Консолидированный бюджет России за первые семь месяцев текущего года исполнен с профицитом 2 трлн 124,8 млрд руб.",
 			url: "https://www.kommersant.ru/doc/5549762",
-			imageUrl: null
 		},
 		{
 			title: "Госдолг еврозоны достиг 97% суммарного ВВП",

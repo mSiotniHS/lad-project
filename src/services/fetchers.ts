@@ -14,7 +14,7 @@ async function fetchArticles(): Promise<Article[]> {
 		const title = item.querySelector("title")?.textContent ?? "";
 		const description = item.querySelector("description")?.textContent ?? "";
 		const url = item.querySelector("link")?.textContent ?? "";
-		const imageUrl = item.querySelector("enclosure")?.getAttribute("url") ?? null;
+		const imageUrl = item.querySelector("enclosure")?.getAttribute("url") ?? undefined;
 
 		articles.push({ title, description, url, imageUrl });
 	});
