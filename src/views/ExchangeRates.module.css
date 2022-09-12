@@ -1,0 +1,12 @@
+.container {
+	display: grid;
+	gap: 30px;
+	grid-template-areas:
+		"USD GBP JPY"
+		"USD GBP JPY"
+		"USD CHF NKD"
+		"EUR CHF NKD"
+		"EUR CNY TRY"
+		"EUR CNY TRY";
+	grid-template-columns: 240px repeat(2, 150px);
+}

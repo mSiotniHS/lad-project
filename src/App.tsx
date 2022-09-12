@@ -5,6 +5,7 @@ import News from "./views/News";
 import { useAppSelector } from "./store/hooks";
 
 import styles from "./App.module.css";
+import ExchangeRates from "./views/ExchangeRates";
 
 const App: FC = () => {
 	const theme = useAppSelector(state => state.settings.theme);
@@ -25,7 +26,7 @@ const App: FC = () => {
 				<Routes>
 					<Route path="/" element={<h1>Сводка</h1>} />
 					<Route path="/news" element={ <News /> } />
-					<Route path="/exchange-rates" element={<h1>Курсы валют</h1>} />
+					<Route path="/exchange-rates" element={ <ExchangeRates /> } />
 					<Route path="/indexes" element={<h1>Показатели</h1>} />
 				</Routes>
 			</main>
