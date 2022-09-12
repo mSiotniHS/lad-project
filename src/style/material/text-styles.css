@@ -9,6 +9,10 @@
 	letter-spacing: -0.25px;
 }
 
+.display-small {
+	font-size: 2.75rem;
+}
+
 .headline-medium {
 	font-size: 1.75rem;
 }
