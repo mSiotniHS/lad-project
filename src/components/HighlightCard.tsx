@@ -1,16 +1,27 @@
 import React, { FC } from "react";
 import styles from "./HighlightCard.module.css";
+import { classes } from "../helpers";
 
-interface Props {
+export interface Props {
 	title: string;
 	subtitle?: string;
 	mainText: string;
 	footnote?: string;
+	size: "small" | "large";
 }
 
-const HighlightCard: FC<Props> = ({ title, subtitle, mainText, footnote }) => {
+const HighlightCard: FC<Props> = (
+	{
+		title,
+		subtitle,
+		mainText,
+		footnote,
+		size
+	}
+) => {
+	const sizeClass = size === "small" ? styles.small : styles.large;
 	return (
-		<div className={styles.card}>
+		<div className={classes(styles.card, sizeClass)}>
 			<div className={styles.titles}>
 				<h2 className="label-large">{title}</h2>
 				{subtitle &&
