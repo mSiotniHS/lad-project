@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, ReactElement } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavRailElement.module.css";
 import { classes } from "../helpers";
@@ -8,14 +8,16 @@ const iconPath = process.env.PUBLIC_URL + "/icons/";
 interface Props {
 	path: string;
 	text: string;
-	iconName: string;
+	icon: ReactElement
 }
 
-const NavRailElement: FC<Props> = ({ path, text, iconName }) => {
+const NavRailElement: FC<Props> = ({ path, text, icon }) => {
 	return (
 		<NavLink to={path} className={activeTheme}>
 			<div className={styles.iconWrapper}>
-				<img className={styles.icon} src={`${iconPath}${iconName}.svg`} alt={iconName} />
+				<div className={styles.icon}>
+					{icon}
+				</div>
 			</div>
 			<p className={classes(styles.text, "label-medium")}>{text}</p>
 		</NavLink>

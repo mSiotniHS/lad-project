@@ -4,6 +4,11 @@ import styles from "./NavRail.module.css";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { toggleTheme } from "../store/slices/appSettingsSlice";
 
+import { ReactComponent as SummaryIcon } from "../style/icons/auto_awesome_mosaic.svg";
+import { ReactComponent as NewsIcon } from "../style/icons/newspaper.svg";
+import { ReactComponent as ExchangeRatesIcon } from "../style/icons/currency.svg";
+import { ReactComponent as IndexesIcon } from "../style/icons/moving.svg";
+
 const NavRail: FC = () => {
 	const theme = useAppSelector(state => state.settings.theme);
 	const dispatch = useAppDispatch();
@@ -15,22 +20,22 @@ const NavRail: FC = () => {
 				<NavRailElement
 					path="/"
 					text="Сводка"
-					iconName="auto_awesome_mosaic"
+					icon={<SummaryIcon />}
 				/>
 				<NavRailElement
 					path="/news"
 					text="Новости"
-					iconName="auto_awesome_mosaic"
+					icon={<NewsIcon />}
 				/>
 				<NavRailElement
 					path="/exchange-rates"
 					text="Курсы валют"
-					iconName="auto_awesome_mosaic"
+					icon={<ExchangeRatesIcon />}
 				/>
 				<NavRailElement
 					path="/indexes"
 					text="Показатели"
-					iconName="auto_awesome_mosaic"
+					icon={<IndexesIcon />}
 				/>
 			</nav>
 			<button onClick={() => dispatch(toggleTheme())}>{theme}</button>
