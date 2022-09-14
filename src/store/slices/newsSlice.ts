@@ -11,24 +11,32 @@ export interface Article {
 export interface NewsState {
 	articles: Article[];
 	status: "idle" | "loading" | "failed";
+	page: number;
 }
 
 const initialState: NewsState = {
 	articles: [],
 	status: "idle",
+	page: 1,
 };
 
 export const addManyNewsAsync = createAsyncThunk(
 	"news/fetchNews",
-	async () => {
-		return await fetchArticles(1);
+	async (_, {dispatch, getState}) => {
+		const page = (getState() as any).news.page;
+		dispatch(incrementPage());
+		return await fetchArticles(page);
 	}
 );
 
 export const newsSlice = createSlice({
 	name: "news",
 	initialState,
-	reducers: {},
+	reducers: {
+		incrementPage: (state) => {
+			state.page += 1;
+		}
+	},
 	extraReducers: (builder) => {
 		builder
 			.addCase(addManyNewsAsync.pending, (state) => {
@@ -40,5 +48,7 @@ export const newsSlice = createSlice({
 			});
 	}
 });
+
+export const {incrementPage} = newsSlice.actions;
 
 export default newsSlice.reducer;
