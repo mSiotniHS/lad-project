@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	place-items: center;
+}
+
+@media (max-width: 800px) {
+	.container {
+		flex-direction: column;
+	}
+}
+
+.numberCards {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	place-items: center;
+}
+
+.currencies {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+}
+
+.news {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}

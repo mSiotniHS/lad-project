@@ -1,41 +1,41 @@
 .element {
-    min-width: 56px;
-    height: 56px;
+	min-width: 56px;
+	height: 56px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
 
-    --background-color: transparent;
-    --icon-color: var(--on-surface-variant);
-    --text-color: var(--on-surface-variant);
+	--background-color: transparent;
+	--icon-color: var(--on-surface-variant);
+	--text-color: var(--on-surface-variant);
 }
 
 .active {
-    --background-color: var(--secondary-container);
-    --icon-color: var(--on-secondary-container);
-    --text-color: var(--on-surface);
+	--background-color: var(--secondary-container);
+	--icon-color: var(--on-secondary-container);
+	--text-color: var(--on-surface);
 }
 
 .iconWrapper {
-    width: 56px;
-    height: 32px;
-    border-radius: 100px;
-    background-color: var(--background-color);
+	width: 56px;
+	height: 32px;
+	border-radius: 100px;
+	background-color: var(--background-color);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
-    color: var(--icon-color);
+	width: 24px;
+	height: 24px;
+	color: var(--icon-color);
 }
 
 .text {
-    color: var(--text-color);
+	color: var(--text-color);
 }

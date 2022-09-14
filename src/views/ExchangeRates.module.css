@@ -7,6 +7,12 @@
 	gap: var(--gap);
 }
 
+@media (max-width: 800px) {
+	.container {
+		flex-direction: column;
+	}
+}
+
 .highlights {
 	display: flex;
 	flex-direction: column;

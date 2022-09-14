@@ -24,7 +24,7 @@ const NavRail: FC = () => {
 				/>
 				<NavRailElement
 					path="/exchange-rates"
-					text="Курсы валют"
+					text="Курс валют"
 					icon={<ExchangeRatesIcon />}
 				/>
 				<NavRailElement

@@ -1,9 +1,7 @@
 import React, { FC, ReactElement } from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./NavRailElement.module.css";
 import { classes } from "../helpers";
-
-const iconPath = process.env.PUBLIC_URL + "/icons/";
+import styles from "./NavRailElement.module.css";
 
 interface Props {
 	path: string;
@@ -11,7 +9,7 @@ interface Props {
 	icon: ReactElement
 }
 
-const NavRailElement: FC<Props> = ({ path, text, icon }) => {
+const NavRailElement: FC<Props> = ({path, text, icon}) => {
 	return (
 		<NavLink to={path} className={activeTheme}>
 			<div className={styles.iconWrapper}>

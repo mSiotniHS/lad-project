@@ -1,10 +1,9 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { toggleTheme } from "../store/slices/appSettingsSlice";
-import styles from "./ThemeSwitcher.module.css";
-
 import { ReactComponent as DarkIcon } from "../style/icons/dark_mode.svg";
 import { ReactComponent as LightIcon } from "../style/icons/light_mode.svg";
+import styles from "./ThemeSwitcher.module.css";
 
 const ThemeSwitcher: FC = () => {
 	const theme = useAppSelector(state => state.settings.theme);

@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import Masonry from "react-masonry-css";
 import ArticleCard from "../components/ArticleCard";
 import TonalButton from "../components/TonalButton";
@@ -9,11 +9,6 @@ import styles from "./News.module.css";
 const News: FC = () => {
 	const news = useAppSelector(state => state.news.articles);
 	const dispatch = useAppDispatch();
-
-	useEffect(() => {
-		dispatch(addManyNewsAsync());
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 
 	return (
 		<div className={styles.news}>

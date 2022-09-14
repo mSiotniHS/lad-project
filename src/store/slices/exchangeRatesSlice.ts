@@ -36,9 +36,6 @@ export const exchangeRatesSlice = createSlice({
 				state.status = "idle";
 				state.rates = action.payload;
 			})
-			// .addCase(updateExchangeRates.rejected, (state) => {
-			// 	state.status = "failed";
-			// });
 	}
 });
 

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import styles from "./HighlightCard.module.css";
 import { classes } from "../helpers";
+import styles from "./HighlightCard.module.css";
 
 export interface Props {
 	title: string;

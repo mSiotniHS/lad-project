@@ -6,10 +6,15 @@
 	background-color: var(--background);
 }
 
+@media (max-width: 800px) {
+	.base {
+		grid-template-columns: 100px 1fr;
+	}
+}
+
 .main {
 	display: flex;
 	justify-content: center;
-	/*align-items: center;*/
-	padding: 70px max(calc((100vw - 1075px)/2), 40px) 0;
+	padding: 70px max(calc((100vw - 1075px) / 2), 40px);
 	overflow-y: auto;
 }

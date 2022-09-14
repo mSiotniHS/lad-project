@@ -1,4 +1,6 @@
-a { display: block; }
+a {
+	display: block;
+}
 
 .card {
 	background-color: var(--surface-variant);
