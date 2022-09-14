@@ -1,12 +1,22 @@
 .container {
+	--gap: 30px;
+
+	display: flex;
+	flex-direction: row;
+	height: calc(240px * 2 + 30px);
+	gap: var(--gap);
+}
+
+.highlights {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gap);
+}
+
+.common {
 	display: grid;
-	gap: 30px;
-	grid-template-areas:
-		"USD GBP JPY"
-		"USD GBP JPY"
-		"USD CHF NKD"
-		"EUR CHF NKD"
-		"EUR CNY TRY"
-		"EUR CNY TRY";
-	grid-template-columns: 240px repeat(2, 150px);
+	grid-template-columns: repeat(2, 150px);
+	gap: var(--gap);
 }
