@@ -6,8 +6,6 @@ const currencies = [
 	"USD", "EUR", "GBP", "CNY", "JPY", "CHF", "HKD", "TRY"
 ] as const;
 
-type Currency = typeof currencies[number];
-
 const currencyNames = {
 	"USD": "Доллар США",
 	"EUR": "Евро",
